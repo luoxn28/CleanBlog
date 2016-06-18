@@ -10,8 +10,11 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
+
 /**
- * Created by luoxn28 on 2016/6/12.
+ * Blog控制器
+ * @author luoxn28
+ * @date 2016.6.18
  */
 @Controller
 @RequestMapping("/blog")
