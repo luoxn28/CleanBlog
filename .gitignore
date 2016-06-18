@@ -13,5 +13,7 @@ hs_err_pid*
 
 # Dir
 .idea/
+out/
 
 Cleanblog.iml
+db.properties

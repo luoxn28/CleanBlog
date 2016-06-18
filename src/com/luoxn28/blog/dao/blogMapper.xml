@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.luoxn28.blog.dao.BlogDao">
+
+    <insert id="insert" parameterType="com.luoxn28.blog.dao.Blog">
+        INSERT blog (title, text, preview, author, category, date)
+        VALUES (#{title}, #{text}, #{preview}, #{author}, #{category}, #{date})
+    </insert>
+
+    <update id="update" parameterType="com.luoxn28.blog.dao.Blog">
+        UPDATE blog set title=#{title}, text=#{text}, preview=#{preview}, author=#{author},
+        category=#{category}, date=#{date} where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM blog WHERE id=#{id}
+    </delete>
+
+    <select id="getById" parameterType="int" resultType="com.luoxn28.blog.dao.Blog">
+        SELECT * FROM blog WHERE id=#{id}
+    </select>
+
+    <select id="getByTitle" parameterType="String" resultType="com.luoxn28.blog.dao.Blog">
+        SELECT * FROM blog WHERE title=#{title}
+    </select>
+
+    <select id="getAll" resultType="com.luoxn28.blog.dao.Blog">
+        SELECT * FROM blog ORDER BY id DESC
+    </select>
+
+</mapper>
