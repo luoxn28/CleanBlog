@@ -4,5 +4,6 @@
 <configuration>
     <mappers>
         <mapper resource="com/luoxn28/blog/dao/blogMapper.xml"/>
+        <mapper resource="com/luoxn28/blog/dao/MessageMapper.xml"/>
     </mappers>
 </configuration>

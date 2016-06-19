@@ -112,9 +112,43 @@
         </ul>
       </div>
     </div>
+
+    <hr/>
+    <!-- 留言板 -->
+    留言板<br/>
+    <c:forEach var="message" items="${messages}">
+      <div class="col-lg-3 col-md-4 bg-info">
+        <label>${message.author}</label> <br/>
+        ${message.content} <br/>
+        ${message.date}
+      </div>
+    </c:forEach>
+
+    <div class="col-lg-12 col-md-12">
+      <form action="/message" method="post">
+        <!--昵称:<input type="text" name="author" placeholder="昵称"/> <br/>
+        评论:
+        <textarea name="content">
+        </textarea-->
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>昵称</label> <!-- 未显示 floating-label-form-group 控制-->
+            <input type="text" class="form-control" name="author" placeholder="昵称"/>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>留言</label>
+            <input type="text" class="form-control" name="content" placeholder="留言"/>
+          </div>
+        </div>
+        <input type="submit" value="提交"/>
+      </form>
+    </div>
+
   </div>
 
-  <hr>
+  <hr/>
 
   <!-- Footer 网页底部 -->
   <%@ include file="footer.html" %>

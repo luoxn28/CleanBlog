@@ -2,6 +2,7 @@ package com.luoxn28.blog.controller;
 
 import com.luoxn28.blog.dao.Blog;
 import com.luoxn28.blog.dao.BlogDao;
+import com.luoxn28.blog.dao.MessageDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +23,17 @@ public class Index {
     @Autowired
     private BlogDao blogDao;
 
+    // Message表操作类
+    @Autowired
+    private MessageDao messageDao;
+
     @RequestMapping("/index")
     public String index(Map<String, Object> map) {
         List<Blog> blogs = blogDao.getAll();
+        List<com.luoxn28.blog.dao.Message> messages = messageDao.getAll();
 
         map.put("blogs", blogs);
+        map.put("messages", messages);
         return "index";
     }
     @RequestMapping("/")

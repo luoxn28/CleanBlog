@@ -27,5 +27,9 @@
         <property name="mapperInterface" value="com.luoxn28.blog.dao.BlogDao"/>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
+    <bean id="messageDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.luoxn28.blog.dao.MessageDao"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
 
 </beans>
