@@ -30,7 +30,7 @@ public class Message {
 
     @RequestMapping
     public String index(com.luoxn28.blog.dao.Message message, Map<String, Object> map) {
-        System.out.println(message);
+        //System.out.println(message);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date = format.format(new Date());
 

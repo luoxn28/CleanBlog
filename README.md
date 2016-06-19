@@ -10,5 +10,27 @@ I've put it on production for my personal blog site on [http://luoxn28.xyz:8080]
 - [Bootstrap](http://www.bootcss.com/)  A very popular and responsive front-end framework.
 - [UEditor](http://ueditor.baidu.com/website/)  A rich text web editor by baidu.
 
+## To use
+Fork CleanBlog project, download it to local computer.
+Create A J2EE Web Application Product by IDEA, import the source code into it.
+Create a db.properties file like this:
+
+```
+user=xxx
+password=xxx
+driverClass=com.mysql.jdbc.Driver
+jdbcUrl=jdbc:mysql://192.168.1.150/clean_blog?useUnicode=true&characterEncoding=utf8
+```
+
+```
+# If you're using Centos server
+
+# Install MySQL
+yum install mysql-server
+service mysql start
+mysql -u root -p
+>> create database clean_blog;
+```
+
 ## License
 Apache License (Version 2.0)
