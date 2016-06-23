@@ -1044,3 +1044,29 @@ function validate_message(form) {
         return false;
     }
 }
+
+// 验证post blog(写博客)
+function validate_post_blog(form) {
+    var title = form.editorTitle.value;
+    var author = form.editorAuthor.value;
+    var preview = form.editorPreview.value;
+    var category = form.editorCategory.value;
+    //var value = form.editorValue.value;
+    
+    if (title == null || title == "") {
+        alert("blog标题不能为空呦");
+        return false;
+    } else if (author == null || author == "") {
+        alert("blog作者不能为空呦");
+        return false;
+    } else if (preview == null || preview == "") {
+        alert("blog简介不能为空呦");
+        return false;
+    } else if (category == null || category == "" || category == "null") {
+        alert("blog种类不能为空呦");
+        return false;
+    } //else if (value == null || value == "") {
+      //  alert("blog内容不能为空呦");
+      //  return false;
+    //}
+}

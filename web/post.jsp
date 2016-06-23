@@ -56,7 +56,7 @@
     <div class="container">
         <div class="row">
             <p><h3>Do you want wirte a blog in here, let's start it!</h3><p>
-            <form action="/post" method="post" id="editorForm">
+            <form action="/post" method="post" id="editorForm" onsubmit="return validate_post_blog(this)">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>blog标题</label> <!-- 未显示 floating-label-form-group 控制-->
@@ -118,7 +118,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="js/clean-blog.js"></script>
 
 </body>
 </html>
