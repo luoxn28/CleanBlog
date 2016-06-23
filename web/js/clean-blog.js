@@ -1030,3 +1030,17 @@ jQuery(document).ready(function($) {
             });
     }
 });
+
+// 验证message(留言板)
+function validate_message(form) {
+    var author = form.author.value;
+    var content = form.content.value;
+
+    if (author == null || author == "") {
+        alert("昵称不能为空呦");
+        return false;
+    } else if (content == null || content == "") {
+        alert("留言不能为空呦");
+        return false;
+    }
+}

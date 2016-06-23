@@ -125,11 +125,7 @@
     </c:forEach>
 
     <div class="col-lg-12 col-md-12">
-      <form action="/message" method="post">
-        <!--昵称:<input type="text" name="author" placeholder="昵称"/> <br/>
-        评论:
-        <textarea name="content">
-        </textarea-->
+      <form action="/message" method="post" onsubmit="return validate_message(this)">
         <div class="row control-group">
           <div class="form-group col-xs-12 floating-label-form-group controls">
             <label>昵称</label> <!-- 未显示 floating-label-form-group 控制-->
@@ -160,7 +156,7 @@
   <script src="js/bootstrap.min.js"></script>
 
   <!-- Custom Theme JavaScript -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="js/clean-blog.js"></script>
 
 </body>
 </html>
