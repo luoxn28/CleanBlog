@@ -61,7 +61,14 @@
       <div class="col-lg-2 col-md-2" style="word-break:break-all;">
         <div>
           <div id='tag-cloud'>
-            左侧导航栏
+            <h3>左侧导航栏</h3>
+            <a href="/category?category=Java">Java</a>
+            <a href="/category?category=C/C++">C/C++</a> <br/>
+            <a href="/category?category=Python">Python</a>
+            <a href="/category?category=OS">OS</a> <br/>
+            <a href="/category?category=网络">网络</a>
+            <a href="/category?category=框架">框架</a> <br/>
+            <a href="/category?category=生活">生活</a>
             <!--
             <form class="navbar-form navbar-left" role="search">
               <div class="form-group">

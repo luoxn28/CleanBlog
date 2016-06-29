@@ -25,6 +25,10 @@
         SELECT * FROM blog WHERE title=#{title}
     </select>
 
+    <select id="getByCategory" parameterType="String" resultType="com.luoxn28.blog.dao.Blog">
+        SELECT * FROM blog WHERE category=#{category} ORDER BY id DESC
+    </select>
+
     <select id="getAll" resultType="com.luoxn28.blog.dao.Blog">
         SELECT * FROM blog ORDER BY id DESC
     </select>

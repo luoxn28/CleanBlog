@@ -19,5 +19,7 @@ public interface BlogDao {
 
     public Blog getByTitle(String title);
 
+    public List<Blog> getByCategory(String category);
+
     public List<Blog> getAll();
 }
